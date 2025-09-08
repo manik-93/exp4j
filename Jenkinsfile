@@ -9,13 +9,13 @@ pipeline {
         }
 stage('Compile') {
             steps {
-              javac App.java
+              bat 'javac App.java'
             }
         }
 
 stage('Run') {
             steps {
-               bat java App
+               bat 'java App'
             }
         }
     }
