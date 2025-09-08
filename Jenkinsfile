@@ -2,24 +2,20 @@ pipeline {
     agent any
 
     stages {
-        stage('Morning') {
+        stage('Clone') {
             steps {
-                echo 'Good Morning ! '
+               
             }
         }
-stage('Noon') {
+stage('Compile') {
             steps {
-                echo 'Good Afternoon  ! '
+              javac 
             }
         }
-stage('Eve') {
+
+stage('Run') {
             steps {
-                echo 'Good Evening! '
-            }
-        }
-stage('Night') {
-            steps {
-                echo 'Good Night ! '
+               bat java 
             }
         }
     }
